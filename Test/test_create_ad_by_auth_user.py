@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.common.exceptions import StaleElementReferenceException
 from locators.locators import *
 from locators.urls import BASE_URL
-
+from utilits.data import existing_email, valid_password, ad_data
 
 
 def safe_click(driver, locator, timeout=5, attempts=3):
@@ -18,7 +18,7 @@ def safe_click(driver, locator, timeout=5, attempts=3):
 
 
 class TestCreareAdByAuthUser:
-    def test_create_ad_by_auth_user(self, driver, existing_email, valid_password, ad_data):
+    def test_create_ad_by_auth_user(self, driver):
         driver.get(BASE_URL)
 
         safe_click(driver, LOGIN_REGISTER_BUTTON)

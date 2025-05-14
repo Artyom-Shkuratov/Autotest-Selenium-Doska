@@ -18,8 +18,13 @@ class TestWithWrongEmail:
         error = WebDriverWait(driver, 5).until(EC.visibility_of_element_located(EMAIL_ERROR))
         assert error.is_displayed(), "Ожидалась ошибка под email"
         
-        for name in ["email", "password", "submitPassword"]:
-            wrapper = driver.find_element(By.NAME, name).find_element(By.XPATH, "./parent::div")
+        name_locators = [
+            EMAIL_INPUT_BY_NAME,
+            PASSWORD_INPUT_BY_NAME,
+            SUBMIT_PASSWORD_INPUT_BY_NAME
+        ]
+
+        for locator in name_locators:
+            wrapper = driver.find_element(*locator).find_element(*PARENT_DIV_BY_XPATH)
             class_value = wrapper.get_attribute("class")
-            assert "input_inputError" in class_value, f"Поле {name} не подсвечено красным"
-        
+            assert "input_inputError" in class_value, f"Поле {locator[1]} не подсвечено красным"

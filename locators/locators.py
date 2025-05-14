@@ -25,3 +25,7 @@ CITY_SPB = (By.XPATH, ".//span[text()='Санкт-Петербург']")
 ADS__SECTION =(By.XPATH, ".//h1[text()='Мои объявления']")
 AD_TITLE = "(//div[@class='about']/h2[contains(text(), '{}')])[1]"
 MODAL_WINDOW =(By.XPATH, ".//h1[contains(text(), 'Чтобы разместить объявление, авторизуйтесь')]")
+EMAIL_INPUT_BY_NAME = (By.NAME, "email")
+PASSWORD_INPUT_BY_NAME = (By.NAME, "password")
+SUBMIT_PASSWORD_INPUT_BY_NAME = (By.NAME, "submitPassword")
+PARENT_DIV_BY_XPATH = (By.XPATH, "./parent::div")

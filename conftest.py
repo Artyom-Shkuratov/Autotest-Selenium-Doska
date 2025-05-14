@@ -13,14 +13,3 @@ def driver():
 def email():
     return generate_random_email()
 
-@pytest.fixture
-def existing_email():
-    return data.existing_email
-
-@pytest.fixture
-def valid_password():
-    return data.valid_password
-
-@pytest.fixture
-def ad_data():
-    return data.ad_data
