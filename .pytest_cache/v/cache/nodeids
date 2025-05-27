@@ -1,0 +1,9 @@
+[
+  "test/test_create_ad_by_auth_user.py::TestCreareAdByAuthUser::test_create_ad_by_auth_user",
+  "test/test_create_ad_by_unauthorized_user.py::TestCreateAdByUnauthorizedUser::test_create_ad_by_unauthorized_user",
+  "test/test_logout_user_after_login.py::TestLogoutUserAfterLogin::test_logout_user_after_login",
+  "test/test_register_user.py::TestRegisterUser::test_login_existing_user",
+  "test/test_registration_with_existing_user.py::TestRegistrationWithExistingUser::test_register_existing_user",
+  "test/test_user_login.py::TestUSerLogin::test_user_login",
+  "test/test_with_wrong_email.py::TestWithWrongEmail::test_invalid_email_format"
+]
